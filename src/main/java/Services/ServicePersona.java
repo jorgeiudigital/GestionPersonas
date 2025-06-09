@@ -37,7 +37,7 @@ public class ServicePersona {
 
     public void mostrarSueldoDirectoresMasculinos(List<Persona> personas) {
         personas.stream()
-                .filter(p -> "Director".equals(p.getCargo()) && "M".equals(p.getGenero()))
+                .filter(p -> "Director".equalsIgnoreCase(p.getCargo()) && "M".equalsIgnoreCase(p.getGenero()))
                 .map(p -> p.getSueldoHora() * 8)
                 .forEach(sueldo -> System.out.println("Sueldo por 8 horas: $" + sueldo));
     }
