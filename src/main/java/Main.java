@@ -8,6 +8,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        // Saludo inicial
+        System.out.println("¡Hola! Bienvenido al Sistema de Gestión de Personas");
+        System.out.println("======================================================");
+        
         List<Persona> personas = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         ServicePersona personaService = new ServicePersona();
@@ -49,6 +53,10 @@ public class Main {
 
         System.out.println("Sueldo por 8 horas de directores masculinos:");
         personaService.mostrarSueldoDirectoresMasculinos(personas);
+        
+        // Mensaje de despedida
+        System.out.println("\n¡Gracias por usar el Sistema de Gestión de Personas!");
+        scanner.close();
     }
 
     }
